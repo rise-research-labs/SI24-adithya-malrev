@@ -1,0 +1,172 @@
+{
+  "main": {
+    "id": "fe834d1d38f6314b",
+    "type": "split",
+    "children": [
+      {
+        "id": "fa51d6624065d2af",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "9514d48bbfd1ce28",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Windows Search Exploit/Explanation.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "b565226b5f31e265",
+    "type": "split",
+    "children": [
+      {
+        "id": "0e946b3907e6a821",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "f7704b8a700f8a4d",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "a4578d245f70e765",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "9bda451f87b02f62",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "e8783c559ea81589",
+    "type": "split",
+    "children": [
+      {
+        "id": "795d59ded0e648eb",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "875ae18817de737b",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Windows Search Exploit/Explanation.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "1afedc83477e6bbd",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Windows Search Exploit/Explanation.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "b3f45feeaf0e9669",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "37ebadc3e6696239",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Windows Search Exploit/Explanation.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "9514d48bbfd1ce28",
+  "lastOpenFiles": [
+    "Untitled.md",
+    "Windows Search Exploit/Explanation.md",
+    "UAC Bypass/UACMe.md",
+    "Windows Search Exploit",
+    "UAC Bypass/Manual fodhelper.exe Exploit.md",
+    "GitHub FIle Upload Exploit/The Exploit.md",
+    "UAC Bypass",
+    "GitHub FIle Upload Exploit/Attachments/Pasted image 20240617205603.png",
+    "GitHub FIle Upload Exploit/Attachments/Pasted image 20240617205558.png",
+    "GitHub FIle Upload Exploit/Attachments/Pasted image 20240617205501.png",
+    "GitHub FIle Upload Exploit/Attachments/Pasted image 20240617205448.png",
+    "GitHub FIle Upload Exploit/Attachments/Pasted image 20240617205415.png",
+    "GitHub FIle Upload Exploit/Attachments/Pasted image 20240617205411.png",
+    "GitHub FIle Upload Exploit/Attachments/Pasted image 20240617202523.png",
+    "GitHub FIle Upload Exploit/Attachments/Pasted image 20240617203218.png",
+    "GitHub FIle Upload Exploit/Attachments/Pasted image 20240617203343.png",
+    "GitHub FIle Upload Exploit/Attachments/Pasted image 20240617203749.png",
+    "GitHub FIle Upload Exploit/Attachments",
+    "Github FIle Upload Exploit.md",
+    "GitHub FIle Upload Exploit"
+  ]
+}
