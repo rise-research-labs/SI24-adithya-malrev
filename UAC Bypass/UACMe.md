@@ -1,7 +1,8 @@
 GitHub repo with UAC bypass techniques.
 https://github.com/hfiref0x/UACME
 
-Tested on Windows 10 Pro 22H2. OS Build - 19045.4529
+Tested on Windows 11 Pro N 23H2 
+OS Build - 22631.3737
 
 ### 1. Exploit 33
 	Author: winscripting.blog
