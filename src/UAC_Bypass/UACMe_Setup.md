@@ -12,3 +12,9 @@
 - Open the UACMe project in Visual Studio
 
 - Build the solution
+
+
+### Notes
+- Defender deletes the executable. Disable before building.
+
+- All the exploits are well known and are detected by defender. Disable before running.
