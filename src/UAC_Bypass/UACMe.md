@@ -48,7 +48,10 @@ OS Build - 22631.3737
 	Implementation: ucmShellRegModMethod
 	Works from: Windows 10 (10240)
 
-The registry key exploits work by modifying the values of the registry keys accessed during the execution of programs with administrative privileges.
+- All of the exploits listed above fall under the category of Registry modification.
+- They work by modifying the values of the registry keys accessed during the execution of programs with administrative privileges.
+
+
 ### 6. Exploit 41
 	Author: Oddvar Moe
 	Type: Elevated COM interface
@@ -58,6 +61,7 @@ The registry key exploits work by modifying the values of the registry keys acce
 	Implementation: ucmCMLuaUtilShellExecMethod
 	Works from: Windows 7 (7600)
 ICMLuaUtil interface exploit (part of the UAC mechanism).
+
 ### 7. Exploit 43
 	Author: Oddvar Moe derivative
 	Type: Elevated COM interface

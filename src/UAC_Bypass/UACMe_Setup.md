@@ -15,6 +15,4 @@
 
 
 ### Notes
-- Defender deletes the executable. Disable before building.
-
-- All the exploits are well known and are detected by defender. Disable before running.
+- All the exploits are well known. Defender will block and delete the executable. Disable defender before building the solution.
