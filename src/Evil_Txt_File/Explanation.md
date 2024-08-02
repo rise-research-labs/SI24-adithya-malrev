@@ -28,4 +28,5 @@
 - `.url` is a trusted file type. So it does not prompt the user when referenced by the `.lnk` file.
 
 
-
+### Full Chain
+`.LNK`(local within archive) -> `.url`(remote) -> `.exe`(local but uses remote directory)
