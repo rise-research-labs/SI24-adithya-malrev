@@ -1,9 +1,6 @@
 GitHub repo with UAC bypass techniques.
 https://github.com/hfiref0x/UACME
 
-Tested on Windows 11 Pro N 23H2 
-OS Build - 22631.3737
-
 ### 1. Exploit 33
 	Author: winscripting.blog
 	Type: Shell API
@@ -81,3 +78,7 @@ Display Color Calibration Wizard exploit.
 	Implementation: ucmDebugObjectMethod
 	Works from: Windows 7 (7600)
 AppInfo ALPC (Advanced Local Procedure Call) service exploit.
+
+### Notes:
+- Tested on Windows 11 Pro N 23H2 OS Build - 22631.3737
+- Refer setup here [UACMe Setup](UAC_Bypass/UACMe_Setup.md)
