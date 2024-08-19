@@ -88,7 +88,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="../GitHub_File_Upload_Exploit/index.html"><strong aria-hidden="true">1.</strong> GitHub File Upload Exploit</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../GitHub_File_Upload_Exploit/The_Exploit.html"><strong aria-hidden="true">1.1.</strong> The Exploit</a></li><li class="chapter-item expanded "><a href="../GitHub_File_Upload_Exploit/Analysis.html"><strong aria-hidden="true">1.2.</strong> Analysis</a></li></ol></li><li class="chapter-item expanded "><a href="../UAC_Bypass/index.html"><strong aria-hidden="true">2.</strong> UAC Bypass</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../UAC_Bypass/UACMe.html"><strong aria-hidden="true">2.1.</strong> UACMe</a></li><li class="chapter-item expanded "><a href="../UAC_Bypass/UACMe_Setup.html"><strong aria-hidden="true">2.2.</strong> UACMe Setup</a></li><li class="chapter-item expanded "><a href="../UAC_Bypass/Manual_fodhelper.exe_Exploit.html"><strong aria-hidden="true">2.3.</strong> Manual fodhelper.exe Exploit</a></li><li class="chapter-item expanded "><a href="../UAC_Bypass/Manual_sdclt.exe_Exploit.html"><strong aria-hidden="true">2.4.</strong> Manual sdclt.exe Exploit</a></li></ol></li><li class="chapter-item expanded "><a href="../Windows_Search_Exploit/index.html"><strong aria-hidden="true">3.</strong> Windows Search Exploit</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../Windows_Search_Exploit/Explanation.html"><strong aria-hidden="true">3.1.</strong> Explanation</a></li><li class="chapter-item expanded "><a href="../Windows_Search_Exploit/PoC.html"><strong aria-hidden="true">3.2.</strong> PoC</a></li><li class="chapter-item expanded "><a href="../Windows_Search_Exploit/PoC_Linux.html"><strong aria-hidden="true">3.3.</strong> PoC-Linux</a></li></ol></li><li class="chapter-item expanded "><a href="../Evil_Txt_File/index.html"><strong aria-hidden="true">4.</strong> Evil.txt</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../Evil_Txt_File/Explanation.html" class="active"><strong aria-hidden="true">4.1.</strong> Explanation</a></li><li class="chapter-item expanded "><a href="../Evil_Txt_File/Analysis.html"><strong aria-hidden="true">4.2.</strong> Analysis</a></li></ol></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="../GitHub_File_Upload_Exploit/index.html"><strong aria-hidden="true">1.</strong> GitHub File Upload Exploit</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../GitHub_File_Upload_Exploit/The_Exploit.html"><strong aria-hidden="true">1.1.</strong> The Exploit</a></li><li class="chapter-item expanded "><a href="../GitHub_File_Upload_Exploit/Analysis.html"><strong aria-hidden="true">1.2.</strong> Analysis</a></li></ol></li><li class="chapter-item expanded "><a href="../UAC_Bypass/index.html"><strong aria-hidden="true">2.</strong> UAC Bypass</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../UAC_Bypass/UACMe.html"><strong aria-hidden="true">2.1.</strong> UACMe</a></li><li class="chapter-item expanded "><a href="../UAC_Bypass/UACMe_Setup.html"><strong aria-hidden="true">2.2.</strong> UACMe Setup</a></li><li class="chapter-item expanded "><a href="../UAC_Bypass/Manual_fodhelper.exe_Exploit.html"><strong aria-hidden="true">2.3.</strong> Manual fodhelper.exe Exploit</a></li><li class="chapter-item expanded "><a href="../UAC_Bypass/Manual_sdclt.exe_Exploit.html"><strong aria-hidden="true">2.4.</strong> Manual sdclt.exe Exploit</a></li><li class="chapter-item expanded "><a href="../UAC_Bypass/Manual_computerdefaults.exe_Exploit.html"><strong aria-hidden="true">2.5.</strong> Manual computerdefaults.exe Exploit</a></li><li class="chapter-item expanded "><a href="../UAC_Bypass/Task_Scheduler.html"><strong aria-hidden="true">2.6.</strong> Task Scheduler</a></li><li class="chapter-item expanded "><a href="../UAC_Bypass/Silent_Cleanup_Task.html"><strong aria-hidden="true">2.7.</strong> Silent Cleanup</a></li><li class="chapter-item expanded "><a href="../UAC_Bypass/Dot_Net_Profiler_DLL_Loading.html"><strong aria-hidden="true">2.8.</strong> .NET Profiler DLL Loading</a></li></ol></li><li class="chapter-item expanded "><a href="../Windows_Search_Exploit/index.html"><strong aria-hidden="true">3.</strong> Windows Search Exploit</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../Windows_Search_Exploit/Explanation.html"><strong aria-hidden="true">3.1.</strong> Explanation</a></li><li class="chapter-item expanded "><a href="../Windows_Search_Exploit/PoC.html"><strong aria-hidden="true">3.2.</strong> PoC</a></li><li class="chapter-item expanded "><a href="../Windows_Search_Exploit/PoC_Linux.html"><strong aria-hidden="true">3.3.</strong> PoC-Linux</a></li></ol></li><li class="chapter-item expanded "><a href="../Evil_Txt_File/index.html"><strong aria-hidden="true">4.</strong> Evil.txt</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../Evil_Txt_File/Explanation.html" class="active"><strong aria-hidden="true">4.1.</strong> Explanation</a></li><li class="chapter-item expanded "><a href="../Evil_Txt_File/Analysis.html"><strong aria-hidden="true">4.2.</strong> Analysis</a></li></ol></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle">
                 <div class="sidebar-resize-indicator"></div>
@@ -173,7 +173,8 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h3 id="technical-details"><a class="header" href="#technical-details">Technical Details</a></h3>
+                        <h1 id="explanation"><a class="header" href="#explanation">Explanation</a></h1>
+<h3 id="technical-details"><a class="header" href="#technical-details">Technical Details</a></h3>
 <ul>
 <li>CVE-2024-30050</li>
 <li>Windows Mark of the Web Security Feature Bypass Vulnerability</li>
@@ -192,15 +193,15 @@
 <ul>
 <li>Referencing a remote file using a <code>.url</code> file will prompt a warning message.</li>
 <li>Referencing a local file will not prompt a warning message.</li>
-<li>The <code>WorkingDirectory</code> parameter allows us to define the directory in which the executable is executed. This can be either local or remote.</li>
-<li>In this exploit a local executable is referenced from a remote server without triggering the warning message.</li>
+<li>The <code>WorkingDirectory</code> parameter allows us to define the directory that will be used by the executable. This can be either local or remote.</li>
+<li>In this exploit a local executable references files from a remote server without triggering the warning message.</li>
 <li>The <code>WorkingDirectory</code> for this executable is a folder on the remote server. The executables that search for specific files within the directory will now use the files from the remote server instead.</li>
 </ul>
 <h3 id="stordiagexe"><a class="header" href="#stordiagexe">stordiag.exe</a></h3>
 <ul>
 <li>Storage Diagnostic Tool allows System Administrators to collect and analyze storage-related data, which can help them troubleshoot Hard Disk and storage diagnostic issues. It can collect all storage and file system-related data and diagnostic logs and output them to a folder.</li>
 <li>stordiag.exe is designed to search the working directory for a file named as <code>powershell.exe</code>.</li>
-<li>This exploit uses a <code>.url</code> shortcut file to call <code>stordiage.exe</code> and then run it within a remote file share with a malicious executable named as <code>powershell.exe</code>.</li>
+<li>This exploit uses a <code>.url</code> shortcut file to call <code>stordiage.exe</code> and then it references files within a remote file share containing a malicious executable named as <code>powershell.exe</code>.</li>
 </ul>
 <h3 id="lnk-files-and-archives"><a class="header" href="#lnk-files-and-archives">.LNK files and Archives</a></h3>
 <ul>
@@ -208,6 +209,8 @@
 <li>It can be used to run files from within the archive. It will give a user prompt unless the file being referenced is a trusted file type.</li>
 <li><code>.url</code> is a trusted file type. So it does not prompt the user when referenced by the <code>.lnk</code> file.</li>
 </ul>
+<h3 id="full-chain"><a class="header" href="#full-chain">Full Chain</a></h3>
+<p><code>.LNK</code>(local within archive) -&gt; <code>.url</code>(remote) -&gt; <code>.exe</code>(local but uses remote directory)</p>
 
                     </main>
 

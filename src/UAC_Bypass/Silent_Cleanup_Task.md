@@ -1,3 +1,4 @@
+# Silent Cleanup Task
 Silent Cleanup is an auto-elevated task located at `%windir%\system32\cleanmgr.exe`
 
 ### Adding Registry Keys

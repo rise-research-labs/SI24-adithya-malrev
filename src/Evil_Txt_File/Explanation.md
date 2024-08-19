@@ -1,3 +1,5 @@
+# Explanation
+
 ### Technical Details
 - CVE-2024-30050
 - Windows Mark of the Web Security Feature Bypass Vulnerability

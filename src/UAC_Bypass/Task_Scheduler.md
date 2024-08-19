@@ -1,3 +1,4 @@
+# Task Scheduler
 - This exploit relies on the Task Scheduler GUI opening as administrator by default without any user prompts.
 
 ### SCHTASKS

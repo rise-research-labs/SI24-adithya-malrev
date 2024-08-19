@@ -1,3 +1,5 @@
+# Dot_Net_Profiler_DLL_Loading
+
 https://github.com/Offensive-Panda/.NET_PROFILER_DLL_LOADING/
 
 .NET profiler DLL loading can be abused to make a legit .NET application load a malicious DLL using environment variables.

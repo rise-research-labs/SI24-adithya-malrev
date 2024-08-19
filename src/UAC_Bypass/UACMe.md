@@ -1,3 +1,5 @@
+# UACMe
+
 GitHub repo with UAC bypass techniques.
 https://github.com/hfiref0x/UACME
 
@@ -81,4 +83,4 @@ AppInfo ALPC (Advanced Local Procedure Call) service exploit.
 
 ### Notes:
 - Tested on Windows 11 Pro N 23H2 OS Build - 22631.3737
-- Refer setup here [UACMe Setup](UAC_Bypass/UACMe_Setup.md)
+- Refer setup here [UACMe Setup](./UACMe_Setup.md)
