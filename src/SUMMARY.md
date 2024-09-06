@@ -14,11 +14,7 @@
 	- [Silent Cleanup](UAC_Bypass/Silent_Cleanup_Task.md)
 	- [.NET Profiler DLL Loading](UAC_Bypass/Dot_Net_Profiler_DLL_Loading.md)
 
-- [Windows Search Exploit](UAC_Bypass/Attachments/Windows_Search_Exploit/README.md)
-	- [Explanation](UAC_Bypass/Attachments/Windows_Search_Exploit/Explanation.md)
-	- [PoC](UAC_Bypass/Attachments/Windows_Search_Exploit/PoC.md)
-	- [PoC-Linux](UAC_Bypass/Attachments/Windows_Search_Exploit/PoC_Linux.md)
-
-- [Evil.txt](Evil_Txt_File/README.md)
+- [Windows Search Exploit](Windows_Search_Exploit/README.md)
+	- [Explanation](Windows_Search_Exploit/Explanation.md)tach[PoC](Windows_Search_Exploit/PoC.md)ass/[PoC-Linux](Windows_Search_Exploit/PoC_Linux.md)_File/README.md)
 	- [Explanation](Evil_Txt_File/Explanation.md)
 	- [Analysis](Evil_Txt_File/Analysis.md)
